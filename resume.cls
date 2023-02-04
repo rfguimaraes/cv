@@ -1,3 +1,7 @@
+% SPDX-FileCopyrightText: 2023 Trey Hunner
+%
+% SPDX-License-Identifier: FSFAP
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Medium Length Professional CV - RESUME CLASS FILE
 %
