@@ -3,7 +3,24 @@
 % SPDX-License-Identifier: Apache-2.0
 
 \newcommand{\degreeName}[1]{{\textbf{#1}}}
-\newcommand{\eduItem}[4]{{\degreeName{#1}}, #2 \hfill {#3}\\#4}
+\newcommand{\roleName}[1]{{\textbf{#1}}}
+\newcommand{\location}[1]{{\textit{#1}}}
 
-\newcommand{\USP}{\href{https://www.usp.br/en}{University of São Paulo, Brazil}}
-\newcommand{\IMEUSP}{\href{https://ime.usp.br/en}{Institute of Mathematics and Statistics, University of São Paulo, Brazil}}
+% \newcommand{\eduItem}[5]{{\degreeName{#1}} \hfill #2\\{#3} \hfill \location{#4}\\#5}
+\NewDocumentCommand{\eduItem}{mmmmom}{%
+    \IfNoValueTF{#5}%
+    {\degreeName{#1} \hfill #2\\{#3} \hfill \location{#4}\\#6}%
+    {\degreeName{#1} \emph{(#5)} \hfill  #2\\{#3} \hfill \location{#4}\\#6}%
+}
+
+\NewDocumentCommand{\expItem}{mmmmom}{%
+    \IfNoValueTF{#5}%
+    {\roleName{#1} \hfill #2\\{#3} \hfill \location{#4} #6}%
+    {\roleName{#1} \emph{(#5)} \hfill  #2\\{#3} \hfill \location{#4} #6}%
+}
+
+\newcommand{\USP}{\href{https://www.usp.br/en/}{University of São Paulo}}
+\newcommand{\IMEUSP}{\href{https://ime.usp.br/en/}{Institute of Mathematics and Statistics}}
+
+\newcommand{\UiB}{\href{https://www.uib.no/en/}{University of Bergen}}
+\newcommand{\IIUiB}{\href{https://www.uib.no/en/ii/}{Department of Informatics}}
