@@ -32,3 +32,9 @@
 \newcommand{\IMGUoM}{\href{https://www.cs.manchester.ac.uk/research/expertise/information-management/}{Information Management Group}}
 
 \newcommand{\RedeLinux}{\href{https://www.linux.ime.usp.br/}{Rede Linux}}
+
+\NewDocumentCommand{\InProcCite}{mo}{%
+    \IfNoValueTF{#2}%
+    {\Citeauthor{#1} \citetitle{#1}. In: \citefield{#1}{booktitle} \citeyear{#1}}%
+    {\Citeauthor{#1} \href{#2}{\citetitle{#1}}. In: \citefield{#1}{booktitle} \citeyear{#1}}%
+}

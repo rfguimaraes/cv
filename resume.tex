@@ -8,14 +8,24 @@
 \usepackage{xparse}
 \usepackage{cvstyles}
 
+\usepackage[
+  backend=biber,
+  bibencoding=utf8,
+  style=alphabetic,
+  giveninits=true
+]{biblatex}
+\addbibresource{cv.bib}
+
 \name{Ricardo Ferreira Guimarães}
 \address{+47 48 48 03 81 \\ Bergen, Norway} 
 \address{\href{mailto:rfguimaraes0@gmail.com}{rfguimaraes0@gmail.com} \\ \href{https://rfguimaraes.github.io}{rfguimaraes.github.io}}
+\DeclareNameAlias{author}{family-given}
 
 \begin{document}
     \input{sec_objective.tex}
     \input{sec_experience.tex}
     \input{sec_education.tex}
     \input{sec_skills.tex}
+    \input{sec_publications.tex}
 \end{document}
 
